@@ -25,3 +25,8 @@ curl -O http://apache.spinellicreations.com//jmeter/binaries/apache-jmeter-3.3.t
 
 tar -xvzf apache-jmeter-3.3.tgz
 
+### create Sample.jmx file through Jmeter GUI and take it to linux machine.
+
+/opt/jmeter/apache-jmeter-3.3/bin/jmeter -n -t /opt/jmeter/Sample.jmx -l /opt/jmeter/testresults.jtl
+
+### take the testresults.jtl back jmeter GUI.
