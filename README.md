@@ -13,3 +13,15 @@ sudo apt-get install -y maven
 ## Create Maven project
 
 mvn archetype:generate -DgroupId=com.batria -DartifactId=HzServer -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+
+## jMeter related commands
+
+mkdir /opt/jmeter
+
+cd /opt/jmeter
+
+curl -O http://apache.spinellicreations.com//jmeter/binaries/apache-jmeter-3.3.tgz
+
+tar -xvzf apache-jmeter-3.3.tgz
+
