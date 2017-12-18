@@ -1,0 +1,161 @@
+2017-12-18 05:33:45,718 INFO o.a.j.u.JMeterUtils: Setting Locale to en_US
+2017-12-18 05:33:45,731 INFO o.a.j.JMeter: Loading user properties from: /opt/jmeter/apache-jmeter-3.3/bin/user.properties
+2017-12-18 05:33:45,731 INFO o.a.j.JMeter: Loading system properties from: /opt/jmeter/apache-jmeter-3.3/bin/system.properties
+2017-12-18 05:33:45,737 INFO o.a.j.JMeter: Copyright (c) 1998-2017 The Apache Software Foundation
+2017-12-18 05:33:45,737 INFO o.a.j.JMeter: Version 3.3 r1808647
+2017-12-18 05:33:45,737 INFO o.a.j.JMeter: java.version=1.8.0_151
+2017-12-18 05:33:45,737 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2017-12-18 05:33:45,737 INFO o.a.j.JMeter: os.name=Linux
+2017-12-18 05:33:45,737 INFO o.a.j.JMeter: os.arch=amd64
+2017-12-18 05:33:45,737 INFO o.a.j.JMeter: os.version=4.9.0-4-amd64
+2017-12-18 05:33:45,737 INFO o.a.j.JMeter: file.encoding=UTF-8
+2017-12-18 05:33:45,737 INFO o.a.j.JMeter: Max memory     =536870912
+2017-12-18 05:33:45,737 INFO o.a.j.JMeter: Available Processors =2
+2017-12-18 05:33:45,742 INFO o.a.j.JMeter: Default Locale=English (United States)
+2017-12-18 05:33:45,743 INFO o.a.j.JMeter: JMeter  Locale=English (United States)
+2017-12-18 05:33:45,743 INFO o.a.j.JMeter: JMeterHome=/opt/jmeter/apache-jmeter-3.3
+2017-12-18 05:33:45,743 INFO o.a.j.JMeter: user.dir  =/opt/jmeter
+2017-12-18 05:33:45,743 INFO o.a.j.JMeter: PWD       =/opt/jmeter
+2017-12-18 05:33:45,743 INFO o.a.j.JMeter: IP: 10.128.0.8 Name: jmeter-1 FullName: jmeter-1.c.first-project-181415.internal
+2017-12-18 05:33:45,747 INFO o.a.j.s.FileServer: Default base='/opt/jmeter'
+2017-12-18 05:33:45,747 INFO o.a.j.s.FileServer: Set new base='/opt/Help/scripts'
+2017-12-18 05:33:45,915 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2017-12-18 05:33:45,936 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2017-12-18 05:33:45,942 INFO o.a.j.s.SaveService: Using SaveService properties version 3.2
+2017-12-18 05:33:45,949 INFO o.a.j.s.SaveService: Loading file: /opt/Help/scripts/OrderTestPlan_jmeter1.jmx
+2017-12-18 05:33:46,048 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2017-12-18 05:33:46,048 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2017-12-18 05:33:46,048 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2017-12-18 05:33:46,048 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2017-12-18 05:33:46,048 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2017-12-18 05:33:46,048 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2017-12-18 05:33:46,090 INFO o.a.j.JMeter: Creating summariser <summary>
+2017-12-18 05:33:46,098 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2017-12-18 05:33:46,099 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2017-12-18 05:33:46,099 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2017-12-18 05:33:46,105 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2017-12-18 05:33:46,105 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2017-12-18 05:33:46,621 INFO o.a.j.JMeter: Running test (1513575226620)
+2017-12-18 05:33:46,665 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : getOrderThrdGrp
+2017-12-18 05:33:46,665 INFO o.a.j.e.StandardJMeterEngine: Starting 20 threads for group getOrderThrdGrp.
+2017-12-18 05:33:46,665 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2017-12-18 05:33:46,666 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=20 ramp-up=300 perThread=15000.0 delayedStart=false
+2017-12-18 05:33:46,682 INFO o.a.j.t.JMeterThread: Thread started: getOrderThrdGrp 1-1
+2017-12-18 05:33:46,722 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = jmeter-1
+2017-12-18 05:33:46,729 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
+2017-12-18 05:33:46,737 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2017-12-18 05:33:46,737 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
+2017-12-18 05:33:46,737 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2017-12-18 05:33:46,738 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2017-12-18 05:33:46,940 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2017-12-18 05:33:46,940 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 2 : createOrderThrdGrp
+2017-12-18 05:33:46,940 INFO o.a.j.e.StandardJMeterEngine: Starting 8 threads for group createOrderThrdGrp.
+2017-12-18 05:33:46,940 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2017-12-18 05:33:46,940 INFO o.a.j.t.ThreadGroup: Starting thread group... number=2 threads=8 ramp-up=300 perThread=37500.0 delayedStart=false
+2017-12-18 05:33:46,953 INFO o.a.j.t.JMeterThread: Thread started: createOrderThrdGrp 2-1
+2017-12-18 05:33:47,095 INFO o.a.j.t.ThreadGroup: Started thread group number 2
+2017-12-18 05:33:47,096 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2017-12-18 05:33:50,566 INFO o.a.j.t.JMeterThread: Thread is done: getOrderThrdGrp 1-1
+2017-12-18 05:33:50,566 INFO o.a.j.t.JMeterThread: Thread finished: getOrderThrdGrp 1-1
+2017-12-18 05:33:50,728 INFO o.a.j.t.JMeterThread: Thread is done: createOrderThrdGrp 2-1
+2017-12-18 05:33:50,728 INFO o.a.j.t.JMeterThread: Thread finished: createOrderThrdGrp 2-1
+2017-12-18 05:34:01,692 INFO o.a.j.t.JMeterThread: Thread started: getOrderThrdGrp 1-2
+2017-12-18 05:34:01,703 INFO o.a.j.r.Summariser: summary +   1501 in 00:00:15 =   99.5/s Avg:     4 Min:     1 Max:   141 Err:     1 (0.07%) Active: 1 Started: 3 Finished: 2
+2017-12-18 05:34:03,808 INFO o.a.j.t.JMeterThread: Thread is done: getOrderThrdGrp 1-2
+2017-12-18 05:34:03,808 INFO o.a.j.t.JMeterThread: Thread finished: getOrderThrdGrp 1-2
+2017-12-18 05:34:16,701 INFO o.a.j.t.JMeterThread: Thread started: getOrderThrdGrp 1-3
+2017-12-18 05:34:18,833 INFO o.a.j.t.JMeterThread: Thread is done: getOrderThrdGrp 1-3
+2017-12-18 05:34:18,833 INFO o.a.j.t.JMeterThread: Thread finished: getOrderThrdGrp 1-3
+2017-12-18 05:34:24,478 INFO o.a.j.t.JMeterThread: Thread started: createOrderThrdGrp 2-2
+2017-12-18 05:34:26,503 INFO o.a.j.t.JMeterThread: Thread is done: createOrderThrdGrp 2-2
+2017-12-18 05:34:26,503 INFO o.a.j.t.JMeterThread: Thread finished: createOrderThrdGrp 2-2
+2017-12-18 05:34:31,739 INFO o.a.j.t.JMeterThread: Thread started: getOrderThrdGrp 1-4
+2017-12-18 05:34:31,748 INFO o.a.j.r.Summariser: summary +   2250 in 00:00:30 =   74.9/s Avg:     2 Min:     1 Max:    12 Err:     0 (0.00%) Active: 1 Started: 6 Finished: 5
+2017-12-18 05:34:31,748 INFO o.a.j.r.Summariser: summary =   3751 in 00:00:45 =   83.1/s Avg:     3 Min:     1 Max:   141 Err:     1 (0.03%)
+2017-12-18 05:34:33,572 INFO o.a.j.t.JMeterThread: Thread is done: getOrderThrdGrp 1-4
+2017-12-18 05:34:33,572 INFO o.a.j.t.JMeterThread: Thread finished: getOrderThrdGrp 1-4
+2017-12-18 05:34:46,760 INFO o.a.j.t.JMeterThread: Thread started: getOrderThrdGrp 1-5
+2017-12-18 05:34:48,385 INFO o.a.j.t.JMeterThread: Thread is done: getOrderThrdGrp 1-5
+2017-12-18 05:34:48,385 INFO o.a.j.t.JMeterThread: Thread finished: getOrderThrdGrp 1-5
+2017-12-18 05:35:01,783 INFO o.a.j.t.JMeterThread: Thread started: getOrderThrdGrp 1-6
+2017-12-18 05:35:01,791 INFO o.a.j.r.Summariser: summary +   1500 in 00:00:30 =   49.9/s Avg:     1 Min:     1 Max:    38 Err:     0 (0.00%) Active: 1 Started: 8 Finished: 7
+2017-12-18 05:35:01,792 INFO o.a.j.r.Summariser: summary =   5251 in 00:01:15 =   69.9/s Avg:     2 Min:     1 Max:   141 Err:     1 (0.02%)
+2017-12-18 05:35:02,008 INFO o.a.j.t.JMeterThread: Thread started: createOrderThrdGrp 2-3
+2017-12-18 05:35:03,424 INFO o.a.j.t.JMeterThread: Thread is done: getOrderThrdGrp 1-6
+2017-12-18 05:35:03,425 INFO o.a.j.t.JMeterThread: Thread finished: getOrderThrdGrp 1-6
+2017-12-18 05:35:03,640 INFO o.a.j.t.JMeterThread: Thread is done: createOrderThrdGrp 2-3
+2017-12-18 05:35:03,640 INFO o.a.j.t.JMeterThread: Thread finished: createOrderThrdGrp 2-3
+2017-12-18 05:35:16,804 INFO o.a.j.t.JMeterThread: Thread started: getOrderThrdGrp 1-7
+2017-12-18 05:35:18,395 INFO o.a.j.t.JMeterThread: Thread is done: getOrderThrdGrp 1-7
+2017-12-18 05:35:18,395 INFO o.a.j.t.JMeterThread: Thread finished: getOrderThrdGrp 1-7
+2017-12-18 05:35:31,827 INFO o.a.j.t.JMeterThread: Thread started: getOrderThrdGrp 1-8
+2017-12-18 05:35:31,835 INFO o.a.j.r.Summariser: summary +   2250 in 00:00:30 =   74.9/s Avg:     1 Min:     1 Max:    10 Err:     0 (0.00%) Active: 1 Started: 11 Finished: 10
+2017-12-18 05:35:31,836 INFO o.a.j.r.Summariser: summary =   7501 in 00:01:45 =   71.3/s Avg:     2 Min:     1 Max:   141 Err:     1 (0.01%)
+2017-12-18 05:35:33,397 INFO o.a.j.t.JMeterThread: Thread is done: getOrderThrdGrp 1-8
+2017-12-18 05:35:33,397 INFO o.a.j.t.JMeterThread: Thread finished: getOrderThrdGrp 1-8
+2017-12-18 05:35:39,526 INFO o.a.j.t.JMeterThread: Thread started: createOrderThrdGrp 2-4
+2017-12-18 05:35:40,983 INFO o.a.j.t.JMeterThread: Thread is done: createOrderThrdGrp 2-4
+2017-12-18 05:35:40,983 INFO o.a.j.t.JMeterThread: Thread finished: createOrderThrdGrp 2-4
+2017-12-18 05:35:46,837 INFO o.a.j.t.JMeterThread: Thread started: getOrderThrdGrp 1-9
+2017-12-18 05:35:48,517 INFO o.a.j.t.JMeterThread: Thread is done: getOrderThrdGrp 1-9
+2017-12-18 05:35:48,517 INFO o.a.j.t.JMeterThread: Thread finished: getOrderThrdGrp 1-9
+2017-12-18 05:36:01,844 INFO o.a.j.t.JMeterThread: Thread started: getOrderThrdGrp 1-10
+2017-12-18 05:36:01,853 INFO o.a.j.r.Summariser: summary +   2250 in 00:00:30 =   75.0/s Avg:     1 Min:     1 Max:    38 Err:     0 (0.00%) Active: 1 Started: 14 Finished: 13
+2017-12-18 05:36:01,853 INFO o.a.j.r.Summariser: summary =   9751 in 00:02:15 =   72.1/s Avg:     2 Min:     1 Max:   141 Err:     1 (0.01%)
+2017-12-18 05:36:03,861 INFO o.a.j.t.JMeterThread: Thread is done: getOrderThrdGrp 1-10
+2017-12-18 05:36:03,862 INFO o.a.j.t.JMeterThread: Thread finished: getOrderThrdGrp 1-10
+2017-12-18 05:36:16,851 INFO o.a.j.t.JMeterThread: Thread started: getOrderThrdGrp 1-11
+2017-12-18 05:36:17,053 INFO o.a.j.t.JMeterThread: Thread started: createOrderThrdGrp 2-5
+2017-12-18 05:36:18,568 INFO o.a.j.t.JMeterThread: Thread is done: getOrderThrdGrp 1-11
+2017-12-18 05:36:18,568 INFO o.a.j.t.JMeterThread: Thread finished: getOrderThrdGrp 1-11
+2017-12-18 05:36:18,699 INFO o.a.j.t.JMeterThread: Thread is done: createOrderThrdGrp 2-5
+2017-12-18 05:36:18,700 INFO o.a.j.t.JMeterThread: Thread finished: createOrderThrdGrp 2-5
+2017-12-18 05:36:31,862 INFO o.a.j.t.JMeterThread: Thread started: getOrderThrdGrp 1-12
+2017-12-18 05:36:31,871 INFO o.a.j.r.Summariser: summary +   2250 in 00:00:30 =   75.0/s Avg:     2 Min:     1 Max:    12 Err:     0 (0.00%) Active: 1 Started: 17 Finished: 16
+2017-12-18 05:36:31,872 INFO o.a.j.r.Summariser: summary =  12001 in 00:02:45 =   72.6/s Avg:     2 Min:     1 Max:   141 Err:     1 (0.01%)
+2017-12-18 05:36:33,835 INFO o.a.j.t.JMeterThread: Thread is done: getOrderThrdGrp 1-12
+2017-12-18 05:36:33,835 INFO o.a.j.t.JMeterThread: Thread finished: getOrderThrdGrp 1-12
+2017-12-18 05:36:46,873 INFO o.a.j.t.JMeterThread: Thread started: getOrderThrdGrp 1-13
+2017-12-18 05:36:48,657 INFO o.a.j.t.JMeterThread: Thread is done: getOrderThrdGrp 1-13
+2017-12-18 05:36:48,657 INFO o.a.j.t.JMeterThread: Thread finished: getOrderThrdGrp 1-13
+2017-12-18 05:36:54,562 INFO o.a.j.t.JMeterThread: Thread started: createOrderThrdGrp 2-6
+2017-12-18 05:36:56,258 INFO o.a.j.t.JMeterThread: Thread is done: createOrderThrdGrp 2-6
+2017-12-18 05:36:56,258 INFO o.a.j.t.JMeterThread: Thread finished: createOrderThrdGrp 2-6
+2017-12-18 05:37:01,884 INFO o.a.j.t.JMeterThread: Thread started: getOrderThrdGrp 1-14
+2017-12-18 05:37:01,893 INFO o.a.j.r.Summariser: summary +   2250 in 00:00:30 =   74.9/s Avg:     2 Min:     1 Max:   337 Err:     0 (0.00%) Active: 1 Started: 20 Finished: 19
+2017-12-18 05:37:01,893 INFO o.a.j.r.Summariser: summary =  14251 in 00:03:15 =   73.0/s Avg:     2 Min:     1 Max:   337 Err:     1 (0.01%)
+2017-12-18 05:37:03,716 INFO o.a.j.t.JMeterThread: Thread is done: getOrderThrdGrp 1-14
+2017-12-18 05:37:03,716 INFO o.a.j.t.JMeterThread: Thread finished: getOrderThrdGrp 1-14
+2017-12-18 05:37:16,891 INFO o.a.j.t.JMeterThread: Thread started: getOrderThrdGrp 1-15
+2017-12-18 05:37:18,626 INFO o.a.j.t.JMeterThread: Thread is done: getOrderThrdGrp 1-15
+2017-12-18 05:37:18,627 INFO o.a.j.t.JMeterThread: Thread finished: getOrderThrdGrp 1-15
+2017-12-18 05:37:31,902 INFO o.a.j.t.JMeterThread: Thread started: getOrderThrdGrp 1-16
+2017-12-18 05:37:31,910 INFO o.a.j.r.Summariser: summary +   1500 in 00:00:30 =   50.0/s Avg:     2 Min:     1 Max:     7 Err:     0 (0.00%) Active: 1 Started: 22 Finished: 21
+2017-12-18 05:37:31,910 INFO o.a.j.r.Summariser: summary =  15751 in 00:03:45 =   69.9/s Avg:     2 Min:     1 Max:   337 Err:     1 (0.01%)
+2017-12-18 05:37:32,082 INFO o.a.j.t.JMeterThread: Thread started: createOrderThrdGrp 2-7
+2017-12-18 05:37:33,359 INFO o.a.j.t.JMeterThread: Thread is done: getOrderThrdGrp 1-16
+2017-12-18 05:37:33,359 INFO o.a.j.t.JMeterThread: Thread finished: getOrderThrdGrp 1-16
+2017-12-18 05:37:33,494 INFO o.a.j.t.JMeterThread: Thread is done: createOrderThrdGrp 2-7
+2017-12-18 05:37:33,494 INFO o.a.j.t.JMeterThread: Thread finished: createOrderThrdGrp 2-7
+2017-12-18 05:37:46,918 INFO o.a.j.t.JMeterThread: Thread started: getOrderThrdGrp 1-17
+2017-12-18 05:37:48,466 INFO o.a.j.t.JMeterThread: Thread is done: getOrderThrdGrp 1-17
+2017-12-18 05:37:48,466 INFO o.a.j.t.JMeterThread: Thread finished: getOrderThrdGrp 1-17
+2017-12-18 05:38:01,931 INFO o.a.j.t.JMeterThread: Thread started: getOrderThrdGrp 1-18
+2017-12-18 05:38:01,938 INFO o.a.j.r.Summariser: summary +   2250 in 00:00:30 =   74.9/s Avg:     1 Min:     1 Max:     9 Err:     0 (0.00%) Active: 1 Started: 25 Finished: 24
+2017-12-18 05:38:01,939 INFO o.a.j.r.Summariser: summary =  18001 in 00:04:15 =   70.5/s Avg:     2 Min:     1 Max:   337 Err:     1 (0.01%)
+2017-12-18 05:38:03,541 INFO o.a.j.t.JMeterThread: Thread is done: getOrderThrdGrp 1-18
+2017-12-18 05:38:03,541 INFO o.a.j.t.JMeterThread: Thread finished: getOrderThrdGrp 1-18
+2017-12-18 05:38:09,597 INFO o.a.j.t.JMeterThread: Thread started: createOrderThrdGrp 2-8
+2017-12-18 05:38:11,069 INFO o.a.j.t.JMeterThread: Thread is done: createOrderThrdGrp 2-8
+2017-12-18 05:38:11,069 INFO o.a.j.t.JMeterThread: Thread finished: createOrderThrdGrp 2-8
+2017-12-18 05:38:16,933 INFO o.a.j.t.JMeterThread: Thread started: getOrderThrdGrp 1-19
+2017-12-18 05:38:18,519 INFO o.a.j.t.JMeterThread: Thread is done: getOrderThrdGrp 1-19
+2017-12-18 05:38:18,519 INFO o.a.j.t.JMeterThread: Thread finished: getOrderThrdGrp 1-19
+2017-12-18 05:38:31,960 INFO o.a.j.t.JMeterThread: Thread started: getOrderThrdGrp 1-20
+2017-12-18 05:38:31,968 INFO o.a.j.r.Summariser: summary +   2250 in 00:00:30 =   74.9/s Avg:     1 Min:     1 Max:    10 Err:     0 (0.00%) Active: 1 Started: 28 Finished: 27
+2017-12-18 05:38:31,968 INFO o.a.j.r.Summariser: summary =  20251 in 00:04:45 =   71.0/s Avg:     2 Min:     1 Max:   337 Err:     1 (0.00%)
+2017-12-18 05:38:33,537 INFO o.a.j.t.JMeterThread: Thread is done: getOrderThrdGrp 1-20
+2017-12-18 05:38:33,537 INFO o.a.j.t.JMeterThread: Thread finished: getOrderThrdGrp 1-20
+2017-12-18 05:38:33,537 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2017-12-18 05:38:33,539 INFO o.a.j.r.Summariser: summary +    749 in 00:00:02 =  476.8/s Avg:     1 Min:     1 Max:     4 Err:     0 (0.00%) Active: 0 Started: 28 Finished: 28
+2017-12-18 05:38:33,539 INFO o.a.j.r.Summariser: summary =  21000 in 00:04:47 =   73.2/s Avg:     2 Min:     1 Max:   337 Err:     1 (0.00%)
