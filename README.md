@@ -31,5 +31,9 @@ tar -xvzf apache-jmeter-3.3.tgz
 
 ### take the testresults.jtl back jmeter GUI.
 
+## Getting IP address
+
+ifconfig | grep broadcast | awk '{print $2}'
+
 
 
