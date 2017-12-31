@@ -27,6 +27,7 @@ case $1 in
         cd /opt/cassandra
         curl -O -k http://apache.claz.org/cassandra/3.11.1/apache-cassandra-3.11.1-bin.tar.gz
         tar -xvzf apache-cassandra-3.11.1-bin.tar.gz
+        echo "Update the YAML file and run the command: apache-cassandra-3.11.1/bin/cassandra -R &"
         ;;
    api)
         echo "Installing api"
