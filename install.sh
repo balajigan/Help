@@ -27,6 +27,10 @@ case $1 in
         ;;
    cassandra)
         echo "Install Cassandra"
+        mkdir /opt/cassandra
+        cd /opt/cassandra
+        curl -O -k http://apache.claz.org/cassandra/3.11.1/apache-cassandra-3.11.1-bin.tar.gz
+        tar -xvzf apache-cassandra-3.11.1-bin.tar.gz
         ;;
    api)
         echo "Installing api"
