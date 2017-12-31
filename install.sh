@@ -11,7 +11,6 @@ sudo apt-get install -y maven
 git clone https://github.com/balajigan/cache-rest-service.git
 cd cache-rest-service/hazelcast-cache-service
 
-git clone https://github.com/balajigan/Hazelcast.git
 
 case $1 in
    dse)
@@ -19,7 +18,8 @@ case $1 in
         
    hz)
         echo "Installing Hz"
-        
+        git clone https://github.com/balajigan/Hazelcast.git
+        cd Hazelcast
         ;;
    cassandra)
         echo "Install Cassandra"
