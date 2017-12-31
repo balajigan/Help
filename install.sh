@@ -14,8 +14,13 @@ cd cache-rest-service/hazelcast-cache-service
 
 case $1 in
    dse)
-        echo "Install DSE"
-        
+        echo "Installing DSE"
+        mkdir /opt/dse
+        cd /opt/dse
+        curl -O -k https://storage.googleapis.com/test-bin-for-use/test-bin.tar.gz
+        tar -xvzf test-bin.tar.gz
+        echo "Update YAMLs and run"
+        ;;
    hz)
         echo "Installing Hz"
         git clone https://github.com/balajigan/Hazelcast.git
