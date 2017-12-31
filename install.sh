@@ -18,12 +18,8 @@ case $1 in
         echo "Install DSE"
         
    hz)
-        echo "
-        mkdir /opt/jmeter
-        cd /opt/jmeter
-        curl -O http://apache.spinellicreations.com//jmeter/binaries/apache-jmeter-3.3.tgz
-        tar -xvzf apache-jmeter-3.3.tgz
-;;Install H       z"
+        echo "Installing Hz"
+        
         ;;
    cassandra)
         echo "Install Cassandra"
