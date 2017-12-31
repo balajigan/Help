@@ -6,12 +6,6 @@ export PATH=$PATH:/usr/lib/jvm/java-8-openjdk-amd64/bin
 sudo apt-get install -y git-core
 sudo apt-get install -y maven
 
-
-
-git clone https://github.com/balajigan/cache-rest-service.git
-cd cache-rest-service/hazelcast-cache-service
-
-
 case $1 in
    dse)
         echo "Installing DSE"
