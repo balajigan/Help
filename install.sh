@@ -19,7 +19,7 @@ case $1 in
         cd /opt/dse
         curl -O -k https://storage.googleapis.com/test-bin-for-use/test-bin.tar.gz
         tar -xvzf test-bin.tar.gz
-        echo "Update YAMLs and run"
+        echo "Update YAMLs and run command: dse-5.1.5/bin/dse cassandra -R &"
         ;;
    hz)
         echo "Installing Hz"
