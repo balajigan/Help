@@ -35,5 +35,9 @@ tar -xvzf apache-jmeter-3.3.tgz
 
 ifconfig | grep broadcast | awk '{print $2}'
 
+## Get the rew install file in the VMs
+
+curl https://raw.githubusercontent.com/balajigan/Help/master/install.sh > install.sh
+
 
 
