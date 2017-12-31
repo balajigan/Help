@@ -39,6 +39,7 @@ case $1 in
         cd /opt/jmeter
         curl -O http://apache.spinellicreations.com//jmeter/binaries/apache-jmeter-3.3.tgz
         tar -xvzf apache-jmeter-3.3.tgz
+        echo "Use this command for running the tests: /opt/jmeter/apache-jmeter-3.3/bin/jmeter -n -t /opt/jmeter/Sample.jmx -l /opt/jmeter/testresults.jtl"
         ;;
    *)
         echo "Unknown"
