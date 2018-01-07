@@ -43,7 +43,7 @@ JMeterUtils.setProperty(&quot;port&quot;, &quot;8080&quot;);
           <stringProp name="CounterConfig.incr">1</stringProp>
           <stringProp name="CounterConfig.name">getOrderId</stringProp>
           <stringProp name="CounterConfig.format"></stringProp>
-          <boolProp name="CounterConfig.per_user">false</boolProp>
+          <boolProp name="CounterConfig.per_user">true</boolProp>
         </CounterConfig>
         <hashTree/>
         <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
