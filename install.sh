@@ -1,10 +1,14 @@
 #!/bin/bash
+
 sudo apt-get update
 sudo apt-get install -y openjdk-8-jdk
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/
 export PATH=$PATH:/usr/lib/jvm/java-8-openjdk-amd64/bin
 sudo apt-get install -y git-core
 sudo apt-get install -y maven
+
+IP_ADDRESS="$(ifconfig | grep broadcast | awk '{print $2}')"
+echo $IP_ADDRESS
 
 case $1 in
    dse)
