@@ -8,8 +8,11 @@ sudo apt-get install -y git-core
 sudo apt-get install -y maven
 
 IP_ADDRESS="$(ifconfig | grep broadcast | awk '{print $2}')"
-echo $IP_ADDRESS
-
+#echo "IP Address = $IP_ADDRESS"
+#echo "listen_address: $IP_ADDRESS" >> /opt/dse/dse-5.1.5/resources/cassandra/conf/cassandra.yaml
+#echo "rpc_address: $IP_ADDRESS" >> /opt/dse/dse-5.1.5/resources/cassandra/conf/cassandra.yaml
+#sed -i -e "s/listen_address: localhost/listen_address: $IP_ADDRESS/g" /opt/dse/dse-5.1.5/resources/cassandra/conf/cassandra.yaml
+#sed -i -e "s/rpc_address: localhost/rpc_address: $IP_ADDRESS/g" /opt/dse/dse-5.1.5/resources/cassandra/conf/cassandra.yaml
 case $1 in
    dse)
         echo "Installing DSE"
@@ -18,7 +21,11 @@ case $1 in
         curl -O -k https://storage.googleapis.com/test-bin-for-use/test-bin.tar.gz
         tar -xvzf test-bin.tar.gz
 	curl https://raw.githubusercontent.com/balajigan/Help/master/templates/dse.yaml > /opt/dse/dse-5.1.5/resources/dse/conf/dse.yaml
-        curl https://raw.githubusercontent.com/balajigan/Help/master/templates/cassandra.yaml > /opt/dse/dse-5.1.5/resources/cassandra/conf/cassandra.yaml	
+        curl https://raw.githubusercontent.com/balajigan/Help/master/templates/cassandra.yaml > /opt/dse/dse-5.1.5/resources/cassandra/conf/cassandra.yaml
+        #sed 'listen_address: $IP_ADDRESS' /opt/dse/dse-5.1.5/resources/cassandra/conf/cassandra.yaml
+        sed -i -e "s/listen_address: localhost/listen_address: $IP_ADDRESS/g" /opt/dse/dse-5.1.5/resources/cassandra/conf/cassandra.yaml
+        sed -i -e "s/rpc_address: localhost/rpc_address: $IP_ADDRESS/g" /opt/dse/dse-5.1.5/resources/cassandra/conf/cassandra.yaml
+
         echo "Update YAMLs and run command: dse-5.1.5/bin/dse cassandra -R &"
         ;;
    hz)
