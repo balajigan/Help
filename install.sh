@@ -13,6 +13,8 @@ case $1 in
         cd /opt/dse
         curl -O -k https://storage.googleapis.com/test-bin-for-use/test-bin.tar.gz
         tar -xvzf test-bin.tar.gz
+	curl https://raw.githubusercontent.com/balajigan/Help/master/templates/dse.yaml > /opt/dse/dse-5.1.5/resources/dse/conf/dse.yaml
+        curl https://raw.githubusercontent.com/balajigan/Help/master/templates/cassandra.yaml > /opt/dse/dse-5.1.5/resources/cassandra/conf/cassandra.yaml	
         echo "Update YAMLs and run command: dse-5.1.5/bin/dse cassandra -R &"
         ;;
    hz)
