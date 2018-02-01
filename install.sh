@@ -60,6 +60,8 @@ case $1 in
 	cd /opt/camunda
 	curl -O -k https://camunda.org/release/camunda-bpm/wildfly10/7.8/camunda-bpm-wildfly10-7.8.0.tar.gz
 	tar -xvzf camunda-bpm-wildfly10-7.8.0.tar.gz
+	sed -i -e "s/jboss.bind.address.management:127.0.0.1/jboss.bind.address.management:$IP_ADDRESS/g" /opt/camunda/server/wildfly-10.1.0.Final/standalone/configuration/standalone.xml
+	sed -i -e "s/jboss.bind.address.management:127.0.0.1/jboss.bind.address.management:$IP_ADDRESS/g" /opt/camunda/server/wildfly-10.1.0.Final/standalone/configuration/standalone.xml
 	;;
    *)
         echo "Unknown"
