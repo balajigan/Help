@@ -54,6 +54,13 @@ case $1 in
         tar -xvzf apache-jmeter-3.3.tgz
         echo "Use this command for running the tests: /opt/jmeter/apache-jmeter-3.3/bin/jmeter -n -t /opt/jmeter/Sample.jmx -l /opt/jmeter/testresults.jtl"
         ;;
+    camunda)
+        echo "Installing Camunda"
+	mkdir /opt/camunda
+	cd /opt/camunda
+	curl -O -k https://camunda.org/release/camunda-bpm/wildfly10/7.8/camunda-bpm-wildfly10-7.8.0.tar.gz
+	tar -xvzf camunda-bpm-wildfly10-7.8.0.tar.gz
+	;;
    *)
         echo "Unknown"
         ;;
