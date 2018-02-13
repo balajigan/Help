@@ -63,6 +63,13 @@ case $1 in
 	sed -i -e "s/jboss.bind.address.management:127.0.0.1/jboss.bind.address.management:$IP_ADDRESS/g" /opt/camunda/server/wildfly-10.1.0.Final/standalone/configuration/standalone.xml
 	sed -i -e "s/jboss.bind.address:127.0.0.1/jboss.bind.address:$IP_ADDRESS/g" /opt/camunda/server/wildfly-10.1.0.Final/standalone/configuration/standalone.xml
 	;;
+     kafka)
+        echo "Installing Kafka"
+	mkdir /opt/kafka
+	cd /opt/kafka
+	curl -O http://apache.claz.org/kafka/1.0.0/kafka_2.12-1.0.0.tgz
+	tar -xvzf kafka_2.12-1.0.0.tgz
+	;;
    *)
         echo "Unknown"
         ;;
