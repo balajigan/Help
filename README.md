@@ -39,5 +39,8 @@ ifconfig | grep broadcast | awk '{print $2}'
 
 curl https://raw.githubusercontent.com/balajigan/Help/master/install.sh > install.sh
 
+curl -O https://raw.githubusercontent.com/balajigan/Help/master/install.sh && chmod 777 install.sh
+
+
 
 
