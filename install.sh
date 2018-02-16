@@ -64,6 +64,11 @@ case $1 in
 	sed -i -e "s/jboss.bind.address:127.0.0.1/jboss.bind.address:$IP_ADDRESS/g" /opt/camunda/server/wildfly-10.1.0.Final/standalone/configuration/standalone.xml
 	;;
      kafka)
+        echo "Installing Zookeeper"
+	mkdir /opt/zookeeper
+	cd /opt/zookeeper
+	curl -O http://www.gtlib.gatech.edu/pub/apache/zookeeper/zookeeper-3.4.10/zookeeper-3.4.10.tar.gz
+	tar -xvzf zookeeper-3.4.10.tar.gz
         echo "Installing Kafka"
 	mkdir /opt/kafka
 	cd /opt/kafka
