@@ -76,6 +76,7 @@ case $1 in
 	curl -O http://apache.claz.org/kafka/1.0.0/kafka_2.12-1.0.0.tgz
 	tar -xvzf kafka_2.12-1.0.0.tgz
 	echo "Use this command for running the tests: /opt/zookeeper/zookeeper-3.4.10/bin/zkServer.sh start"
+	echo "Use this command for running the tests: /opt/kafka/kafka_2.12-1.0.0/bin/kafka-server-start.sh /opt/kafka/kafka_2.12-1.0.0/config/server.properties &"
 	;;
    *)
         echo "Unknown"
