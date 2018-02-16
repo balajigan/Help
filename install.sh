@@ -69,11 +69,13 @@ case $1 in
 	cd /opt/zookeeper
 	curl -O http://www.gtlib.gatech.edu/pub/apache/zookeeper/zookeeper-3.4.10/zookeeper-3.4.10.tar.gz
 	tar -xvzf zookeeper-3.4.10.tar.gz
+	cp /opt/zookeeper/zookeeper-3.4.10/conf/zoo_sample.cfg /opt/zookeeper/zookeeper-3.4.10/conf/zoo.cfg
         echo "Installing Kafka"
 	mkdir /opt/kafka
 	cd /opt/kafka
 	curl -O http://apache.claz.org/kafka/1.0.0/kafka_2.12-1.0.0.tgz
 	tar -xvzf kafka_2.12-1.0.0.tgz
+	echo "Use this command for running the tests: /opt/zookeeper/zookeeper-3.4.10/bin/zkServer.sh start"
 	;;
    *)
         echo "Unknown"
