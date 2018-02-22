@@ -79,6 +79,13 @@ case $1 in
 	echo "Use this command for running the tests: /opt/kafka/kafka_2.12-1.0.0/bin/kafka-server-start.sh /opt/kafka/kafka_2.12-1.0.0/config/server.properties &"
 	#/opt/kafka/kafka_2.12-1.0.0/bin/kafka-topics.sh --create --topic test-topic --zookeeper localhost:2181 --partitions 3 --replication-factor 1
 	;;
+   spark)
+        echo "Installing Spark"
+	mkdir /opt/spark
+	cd /opt/spark
+	curl -O http://apache.claz.org/spark/spark-2.2.1/spark-2.2.1-bin-hadoop2.7.tgz
+	tar -xvzf spark-2.2.1-bin-hadoop2.7.tgz
+	;;
    *)
         echo "Unknown"
         ;;
