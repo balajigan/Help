@@ -115,7 +115,12 @@ case $1 in
 	tar -xvzf prometheus-2.2.0-rc.1.linux-amd64.tar.gz
 	wget https://github.com/prometheus/alertmanager/releases/download/v0.15.0-rc.0/alertmanager-0.15.0-rc.0.linux-amd64.tar.gz
 	tar -xvzf alertmanager-0.15.0-rc.0.linux-amd64.tar.gz
+	wget https://github.com/prometheus/node_exporter/releases/download/v0.15.2/node_exporter-0.15.2.linux-amd64.tar.gz
+	tar -xvzf node_exporter-0.15.2.linux-amd64.tar.gz
+	echo "Starting the node exporter"
+	node_exporter-0.15.2.linux-amd64/node_exporter &
 	cd prometheus-2.2.0-rc.1.linux-amd64
+	curl https://raw.githubusercontent.com/balajigan/Help/master/templates/dse.yaml > /opt/prometheus/prometheus-2.2.0-rc.1.linux-amd64/dse.yaml
 	echo 'Use this command: ./prometheus --config.file=prometheus.yml --web.listen-address="$IP_ADDRESS:80"'
 	
    *)
