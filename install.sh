@@ -123,6 +123,18 @@ case $1 in
 	curl https://raw.githubusercontent.com/balajigan/Help/master/templates/prometheus_config.yml > /opt/prometheus/prometheus-2.2.0-rc.1.linux-amd64/prometheus_config.yml
 	echo 'Use this command: ./prometheus --config.file=prometheus_config.yml --web.listen-address="$IP_ADDRESS:80"'
 	;;
+     grafana)
+        echo "Installing grafana"
+	mkdir /opt/grafana
+	cd /opt/grafana
+	wget https://s3-us-west-2.amazonaws.com/grafana-releases/release/grafana_4.6.3_amd64.deb
+	sudo apt-get install -y adduser libfontconfig
+	sudo dpkg -i grafana_4.6.3_amd64.deb
+	curl https://raw.githubusercontent.com/balajigan/Help/master/templates/grafana.ini > /etc/grafana/grafana.ini
+	
+	echo "Updating iptables to redirect port 80 to port 3000"
+	sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 3000
+	;;
    *)
         echo "Unknown"
         ;;
