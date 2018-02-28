@@ -122,7 +122,7 @@ case $1 in
 	cd prometheus-2.2.0-rc.1.linux-amd64
 	curl https://raw.githubusercontent.com/balajigan/Help/master/templates/prometheus_config.yml > /opt/prometheus/prometheus-2.2.0-rc.1.linux-amd64/prometheus_config.yml
 	echo 'Use this command: ./prometheus --config.file=prometheus_config.yml --web.listen-address="$IP_ADDRESS:80"'
-	
+	;;
    *)
         echo "Unknown"
         ;;
