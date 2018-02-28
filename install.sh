@@ -106,6 +106,7 @@ case $1 in
 	sudo dpkg -i kibana-6.2.2-amd64.deb
 	sed -i -e "s/# server.host: localhost/server.host: $IP_ADDRESS/g" /etc/kibana/kibana.yml
 	echo "Use this command:  service kibana start"
+	;;
    *)
         echo "Unknown"
         ;;
