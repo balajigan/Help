@@ -130,10 +130,11 @@ case $1 in
 	wget https://s3-us-west-2.amazonaws.com/grafana-releases/release/grafana_4.6.3_amd64.deb
 	sudo apt-get install -y adduser libfontconfig
 	sudo dpkg -i grafana_4.6.3_amd64.deb
-	curl https://raw.githubusercontent.com/balajigan/Help/master/templates/grafana.ini > /etc/grafana/grafana.ini
-	
+	curl https://raw.githubusercontent.com/balajigan/Help/master/templates/grafana.ini > /etc/grafana/grafana.ini 
+	sed -i -e "s/;http_addr = localhost/http_addr = $IP_ADDRESS/g" /etc/grafana/grafana.ini
 	echo "Updating iptables to redirect port 80 to port 3000"
 	sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 3000
+	echo "start the grafana: sudo service grafana-server start"
 	;;
    *)
         echo "Unknown"
