@@ -86,6 +86,22 @@ case $1 in
 	curl -O http://apache.claz.org/spark/spark-2.2.1/spark-2.2.1-bin-hadoop2.7.tgz
 	tar -xvzf spark-2.2.1-bin-hadoop2.7.tgz
 	;;
+    elastic)
+        echo "Installing Elasticsearch"
+	mkdir /opt/elastic
+	cd /opt/elastic
+	wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.2.2.deb
+	sudo dpkg -i elasticsearch-6.2.2.deb
+	echo "Use this command:  service elasticsearch start"
+	;;
+     kibana)
+        echo "Installing kibana"
+	mkdir /opt/kibana
+	cd /opt/kibana
+	wget https://artifacts.elastic.co/downloads/kibana/kibana-6.2.2-amd64.deb
+	sudo dpkg -i kibana-6.2.2-amd64.deb
+	 /etc/kibana/kibana.yml
+	echo "Use this command:  service kibana start"
    *)
         echo "Unknown"
         ;;
