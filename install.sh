@@ -107,6 +107,17 @@ case $1 in
 	sed -i -e "s/#server.host: localhost/server.host: $IP_ADDRESS/g" /etc/kibana/kibana.yml
 	echo "Use this command:  service kibana start"
 	;;
+     prometheus)
+        echo "Installing prometheus"
+	mkdir /opt/prometheus
+	cd /opt/prometheus
+	wget https://github.com/prometheus/prometheus/releases/download/v2.2.0-rc.1/prometheus-2.2.0-rc.1.linux-amd64.tar.gz
+	tar -xvzf prometheus-2.2.0-rc.1.linux-amd64.tar.gz
+	wget https://github.com/prometheus/alertmanager/releases/download/v0.15.0-rc.0/alertmanager-0.15.0-rc.0.linux-amd64.tar.gz
+	tar -xvzf alertmanager-0.15.0-rc.0.linux-amd64.tar.gz
+	cd prometheus-2.2.0-rc.1.linux-amd64
+	echo 'Use this command: ./prometheus --config.file=prometheus.yml --web.listen-address="$IP_ADDRESS:80"'
+	
    *)
         echo "Unknown"
         ;;
