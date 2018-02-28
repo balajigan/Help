@@ -8,6 +8,10 @@ sudo apt-get install -y git-core
 sudo apt-get install -y maven
 
 IP_ADDRESS="$(ifconfig | grep broadcast | awk '{print $2}')"
+if [ -z "$IP_ADDRESS"]; then
+      IP_ADDRESS="$(ifconfig | grep Bcast | awk '{print $2}' | awk -F: '{print $2}')"
+fi
+
 #echo "IP Address = $IP_ADDRESS"
 #echo "listen_address: $IP_ADDRESS" >> /opt/dse/dse-5.1.5/resources/cassandra/conf/cassandra.yaml
 #echo "rpc_address: $IP_ADDRESS" >> /opt/dse/dse-5.1.5/resources/cassandra/conf/cassandra.yaml
