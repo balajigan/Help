@@ -144,8 +144,8 @@ case $1 in
 	tar -xvzf logstash-6.2.2.tar.gz
 	cd logstash-6.2.2
 	curl https://raw.githubusercontent.com/balajigan/Help/master/templates/logstash-simple.conf > /opt/logstash/logstash-6.2.2/logstash-simple.conf
-	
-	
+	bin/logstash -f logstash-simple.conf &
+	;;
    *)
         echo "Unknown"
         ;;
