@@ -105,6 +105,7 @@ case $1 in
 	wget https://artifacts.elastic.co/downloads/kibana/kibana-6.2.2-amd64.deb
 	sudo dpkg -i kibana-6.2.2-amd64.deb
 	sed -i -e "s/#server.host: localhost/server.host: $IP_ADDRESS/g" /etc/kibana/kibana.yml
+	sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 5601
 	echo "Use this command:  service kibana start"
 	;;
      prometheus)
