@@ -136,6 +136,16 @@ case $1 in
 	sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 3000
 	echo "start the grafana: sudo service grafana-server start"
 	;;
+     logstash)
+        echo "Installing logstash"
+	mkdir /opt/logstash
+	cd /opt/logstash
+	curl -O -k https://artifacts.elastic.co/downloads/logstash/logstash-6.2.2.tar.gz
+	tar -xvzf logstash-6.2.2.tar.gz
+	cd logstash-6.2.2
+	curl https://raw.githubusercontent.com/balajigan/Help/master/templates/logstash-simple.conf > /opt/logstash/logstash-6.2.2/logstash-simple.conf
+	
+	
    *)
         echo "Unknown"
         ;;
