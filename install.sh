@@ -148,6 +148,7 @@ case $1 in
 	bin/logstash -f logstash-simple.conf &
 	;;
      bosh_cli)
+        echo "Refer this document: https://bosh.io/docs/init-google.html "
         echo "Installing Bosh CLI"
 	mkdir /opt/bosh
 	cd /opt/bosh
@@ -158,7 +159,7 @@ case $1 in
 	sudo apt-get update
 	sudo apt-get install -y build-essential zlibc zlib1g-dev ruby ruby-dev openssl libxslt-dev libxml2-dev libssl-dev libreadline6 libreadline6-dev libyaml-dev libsqlite3-dev sqlite3
 	ruby -v
-	
+	;;
    *)
         echo "Unknown"
         ;;
