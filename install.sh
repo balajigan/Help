@@ -147,6 +147,18 @@ case $1 in
 	curl https://raw.githubusercontent.com/balajigan/Help/master/templates/logstash-simple.conf > /opt/logstash/logstash-6.2.2/logstash-simple.conf
 	bin/logstash -f logstash-simple.conf &
 	;;
+     bosh_cli)
+        echo "Installing Bosh CLI"
+	mkdir /opt/bosh
+	cd /opt/bosh
+	wget https://s3.amazonaws.com/bosh-cli-artifacts/bosh-cli-2.0.48-linux-amd64
+	chmod +x bosh-cli-2.0.48-linux-amd64
+	sudo mv bosh-cli-2.0.48-linux-amd64 /usr/local/bin/bosh
+	echo "Installing dependencies"
+	sudo apt-get update
+	sudo apt-get install -y build-essential zlibc zlib1g-dev ruby ruby-dev openssl libxslt-dev libxml2-dev libssl-dev libreadline6 libreadline6-dev libyaml-dev libsqlite3-dev sqlite3
+	ruby -v
+	
    *)
         echo "Unknown"
         ;;
