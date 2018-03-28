@@ -71,7 +71,7 @@ case $1 in
         echo "Installing Zookeeper"
 	mkdir /opt/zookeeper
 	cd /opt/zookeeper
-	curl -O http://www.gtlib.gatech.edu/pub/apache/zookeeper/zookeeper-3.4.10/zookeeper-3.4.10.tar.gz
+	curl -O http://apache.claz.org/zookeeper/zookeeper-3.4.10/zookeeper-3.4.10.tar.gz
 	tar -xvzf zookeeper-3.4.10.tar.gz
 	cp /opt/zookeeper/zookeeper-3.4.10/conf/zoo_sample.cfg /opt/zookeeper/zookeeper-3.4.10/conf/zoo.cfg
         echo "Installing Kafka"
