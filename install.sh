@@ -177,7 +177,12 @@ case $1 in
         concourse --version
         fly --version
         sudo mkdir /etc/concourse
-
+	echo "Creating the key files"
+        sudo ssh-keygen -t rsa -q -N '' -f /etc/concourse/tsa_host_key
+        sudo ssh-keygen -t rsa -q -N '' -f /etc/concourse/worker_key
+        sudo ssh-keygen -t rsa -q -N '' -f /etc/concourse/session_signing_key
+	ls -l /etc/concourse
+	sudo cp /etc/concourse/worker_key.pub /etc/concourse/authorized_worker_keys
 	
         ;;
    *)
