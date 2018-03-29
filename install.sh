@@ -183,6 +183,11 @@ case $1 in
         sudo ssh-keygen -t rsa -q -N '' -f /etc/concourse/session_signing_key
 	ls -l /etc/concourse
 	sudo cp /etc/concourse/worker_key.pub /etc/concourse/authorized_worker_keys
+        curl https://raw.githubusercontent.com/balajigan/Help/master/templates/web_environment > /etc/concourse/web_environment
+        curl https://raw.githubusercontent.com/balajigan/Help/master/templates/worker_environment > /etc/concourse/worker_environment
+        sudo adduser --system --group concourse
+	sudo chown -R concourse:concourse /etc/concourse
+	sudo chmod 600 /etc/concourse/*_environment
 	
         ;;
    *)
