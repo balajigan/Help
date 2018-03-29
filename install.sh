@@ -160,6 +160,26 @@ case $1 in
 	sudo apt-get install -y build-essential zlibc zlib1g-dev ruby ruby-dev openssl libxslt-dev libxml2-dev libssl-dev libreadline6 libreadline6-dev libyaml-dev libsqlite3-dev sqlite3
 	ruby -v
 	;;
+     concourse)
+        echo "Installing concourse"
+	sudo apt-get update
+	sudo apt-get install postgresql postgresql-contrib
+	sudo -u postgres createuser concourse
+	sudo -u postgres createdb --owner=concourse atc
+	cd /tmp
+	curl -LO https://github.com/concourse/concourse/releases/download/v3.10.0/concourse_linux_amd64
+	curl -LO https://github.com/concourse/concourse/releases/download/v3.10.0/fly_linux_amd64
+	file *linux_amd64 | grep executable
+	chmod +x concourse* fly*
+        sudo mv concourse* /usr/local/bin/concourse
+        sudo mv fly* /usr/local/bin/fly
+	cd ~
+        concourse --version
+        fly --version
+        sudo mkdir /etc/concourse
+
+	
+        ;;
    *)
         echo "Unknown"
         ;;
