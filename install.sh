@@ -191,7 +191,10 @@ case $1 in
 	curl https://raw.githubusercontent.com/balajigan/Help/master/templates/concourse-web.service > /etc/systemd/system/concourse-web.service
         curl https://raw.githubusercontent.com/balajigan/Help/master/templates/concourse-worker.service > /etc/systemd/system/concourse-worker.service
 	echo "Start the concourse worker : sudo systemctl start concourse-web concourse-worker"
+	sudo systemctl start concourse-web concourse-worker
 	echo "Enable the services by: sudo systemctl enable concourse-web concourse-worker"
+	sudo systemctl enable concourse-web concourse-worker
+	sudo systemctl status concourse-web concourse-worker
         echo "login to fly with : fly -t local login -c http://10.142.0.2:8080"
 	echo "check the workers by : fly -t local workers"
 	sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8080
