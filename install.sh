@@ -190,7 +190,11 @@ case $1 in
 	sudo chmod 600 /etc/concourse/*_environment
 	curl https://raw.githubusercontent.com/balajigan/Help/master/templates/concourse-web.service > /etc/systemd/system/concourse-web.service
         curl https://raw.githubusercontent.com/balajigan/Help/master/templates/concourse-worker.service > /etc/systemd/system/concourse-worker.service
-	
+	echo "Start the concourse worker : sudo systemctl start concourse-web concourse-worker"
+	echo "Enable the services by: sudo systemctl enable concourse-web concourse-worker"
+        echo "login to fly with : fly -t local login -c http://10.142.0.2:8080"
+	echo "check the workers by : fly -t local workers"
+	echo "Access the server at : http://servers_public_IP:8080"
         ;;
    *)
         echo "Unknown"
