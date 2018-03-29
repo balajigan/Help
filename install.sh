@@ -188,6 +188,8 @@ case $1 in
         sudo adduser --system --group concourse
 	sudo chown -R concourse:concourse /etc/concourse
 	sudo chmod 600 /etc/concourse/*_environment
+	curl https://raw.githubusercontent.com/balajigan/Help/master/templates/concourse-web.service > /etc/systemd/system/concourse-web.service
+        curl https://raw.githubusercontent.com/balajigan/Help/master/templates/concourse-worker.service > /etc/systemd/system/concourse-worker.service
 	
         ;;
    *)
