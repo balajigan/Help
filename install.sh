@@ -194,7 +194,8 @@ case $1 in
 	echo "Enable the services by: sudo systemctl enable concourse-web concourse-worker"
         echo "login to fly with : fly -t local login -c http://10.142.0.2:8080"
 	echo "check the workers by : fly -t local workers"
-	echo "Access the server at : http://servers_public_IP:8080"
+	sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8080
+	echo "Access the server at : http://servers_public_IP"
         ;;
    *)
         echo "Unknown"
