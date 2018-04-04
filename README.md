@@ -46,6 +46,11 @@ curl https://raw.githubusercontent.com/balajigan/Help/master/install.sh > instal
 
 curl -O https://raw.githubusercontent.com/balajigan/Help/master/install.sh && chmod 777 install.sh
 
+## FLY CLI Commands
 
+fly -t local login -c http://10.142.0.3:8080
 
+fly -t local set-pipeline --pipeline MyPipeline --config pipeline.yml
+
+    
 
