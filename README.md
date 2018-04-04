@@ -18,6 +18,8 @@ mvn archetype:generate -DgroupId=com.batria -DartifactId=HzServer -DarchetypeArt
 
 mvn archetype:generate -B -DarchetypeGroupId=am.ik.archetype -DarchetypeArtifactId=spring-boot-blank-archetype -DarchetypeVersion=1.0.6 -DgroupId=com.poc -DartifactId=PCF-HelloWorld -Dversion=1.0.0
 
+git remote add origin https://github.com/balajigan/PCF-HelloWorld.git
+
 ## jMeter related commands
 
 mkdir /opt/jmeter
