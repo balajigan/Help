@@ -14,6 +14,9 @@ sudo apt-get install -y maven
 
 mvn archetype:generate -DgroupId=com.batria -DartifactId=HzServer -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
 
+## Create Maven Springboot project
+
+mvn archetype:generate -B -DarchetypeGroupId=am.ik.archetype -DarchetypeArtifactId=spring-boot-blank-archetype -DarchetypeVersion=1.0.6 -DgroupId=com.poc -DartifactId=PCF-HelloWorld -Dversion=1.0.0
 
 ## jMeter related commands
 
