@@ -163,7 +163,7 @@ case $1 in
      concourse)
         echo "Installing concourse"
 	sudo apt-get update
-	sudo apt-get install postgresql postgresql-contrib
+	sudo apt-get install -y postgresql postgresql-contrib
 	sudo -u postgres createuser concourse
 	sudo -u postgres createdb --owner=concourse atc
 	cd /tmp
