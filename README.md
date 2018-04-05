@@ -60,4 +60,5 @@ cp stable\?release\=debian64.1 test.deb
 
 sudo dpkg -i test.deb
 
+cf login -a https://api.run.pivotal.io
 
