@@ -52,5 +52,12 @@ fly -t local login -c http://10.142.0.3:8080
 
 fly -t local set-pipeline --pipeline MyPipeline --config pipeline.yml
 
-    
+## Install CF cli
+
+wget https://packages.cloudfoundry.org/stable?release=debian64
+
+cp stable\?release\=debian64.1 test.deb
+
+sudo dpkg -i test.deb
+
 
