@@ -43,6 +43,11 @@ case $1 in
         cd /opt/cassandra
         curl -O -k http://apache.claz.org/cassandra/3.11.1/apache-cassandra-3.11.1-bin.tar.gz
         tar -xvzf apache-cassandra-3.11.1-bin.tar.gz
+	curl https://raw.githubusercontent.com/balajigan/Help/master/templates/cassandra.yaml > /opt/cassandra/apache-cassandra-3.11.1/conf/cassandra.yaml
+        #sed 'listen_address: $IP_ADDRESS' /opt/dse/dse-5.1.5/resources/cassandra/conf/cassandra.yaml
+        sed -i -e "s/listen_address: localhost/listen_address: $IP_ADDRESS/g" /opt/cassandra/apache-cassandra-3.11.1/conf/cassandra.yaml
+        sed -i -e "s/rpc_address: localhost/rpc_address: $IP_ADDRESS/g" /opt/cassandra/apache-cassandra-3.11.1/conf/cassandra.yaml
+
         echo "Update the YAML file and run the command: apache-cassandra-3.11.1/bin/cassandra -R &"
         ;;
    api)
