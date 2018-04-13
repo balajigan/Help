@@ -1,11 +1,11 @@
 #!/bin/bash
 
 sudo apt-get update
-sudo apt-get install -y openjdk-8-jdk
-export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/
-export PATH=$PATH:/usr/lib/jvm/java-8-openjdk-amd64/bin
-sudo apt-get install -y git-core
-sudo apt-get install -y maven
+#sudo apt-get install -y openjdk-8-jdk
+#export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/
+#export PATH=$PATH:/usr/lib/jvm/java-8-openjdk-amd64/bin
+#sudo apt-get install -y git-core
+#sudo apt-get install -y maven
 
 IP_ADDRESS="$(ifconfig | grep broadcast | awk '{print $2}')"
 if [ -z "$IP_ADDRESS"]; then
@@ -18,6 +18,19 @@ fi
 #sed -i -e "s/listen_address: localhost/listen_address: $IP_ADDRESS/g" /opt/dse/dse-5.1.5/resources/cassandra/conf/cassandra.yaml
 #sed -i -e "s/rpc_address: localhost/rpc_address: $IP_ADDRESS/g" /opt/dse/dse-5.1.5/resources/cassandra/conf/cassandra.yaml
 case $1 in
+   base)
+       echo "Installing java"
+       mkdir /opt/java
+       cd /opt/java
+       curl -O -k https://storage.googleapis.com/test-bin-for-use/jdk-8u152-linux-x64.tar.gz
+       tar -xvzf jdk-8u152-linux-x64.tar.gz
+       ln -s /opt/java/jdk1.8.0_152/bin/java /usr/bin/java
+       export JAVA_HOME=/opt/java/jdk1.8.0_152/
+       export PATH=$PATH:/opt/java/jdk1.8.0_152/bin
+       sudo apt-get install -y git-core
+       sudo apt-get install -y maven
+   
+       ;;
    dse)
         echo "Installing DSE"
         mkdir /opt/dse
