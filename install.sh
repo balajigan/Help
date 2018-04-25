@@ -186,8 +186,8 @@ case $1 in
 	sudo -u postgres createuser concourse
 	sudo -u postgres createdb --owner=concourse atc
 	cd /tmp
-	curl -LO https://github.com/concourse/concourse/releases/download/v3.10.0/concourse_linux_amd64
-	curl -LO https://github.com/concourse/concourse/releases/download/v3.10.0/fly_linux_amd64
+	curl -LO https://github.com/concourse/concourse/releases/download/v3.9.0/concourse_linux_amd64
+	curl -LO https://github.com/concourse/concourse/releases/download/v3.9.0/fly_linux_amd64
 	file *linux_amd64 | grep executable
 	chmod +x concourse* fly*
         sudo mv concourse* /usr/local/bin/concourse
