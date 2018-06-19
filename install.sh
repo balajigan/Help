@@ -93,6 +93,7 @@ case $1 in
 	curl -O http://apache.claz.org/zookeeper/zookeeper-3.4.10/zookeeper-3.4.10.tar.gz
 	tar -xvzf zookeeper-3.4.10.tar.gz
 	cp /opt/zookeeper/zookeeper-3.4.10/conf/zoo_sample.cfg /opt/zookeeper/zookeeper-3.4.10/conf/zoo.cfg
+	curl https://raw.githubusercontent.com/balajigan/Help/master/templates/zoo.cfg > /opt/zookeeper/zookeeper-3.4.10/conf/zoo.cfg
         echo "Installing Kafka"
 	mkdir /opt/kafka
 	cd /opt/kafka
