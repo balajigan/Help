@@ -11,7 +11,7 @@ IP_ADDRESS="$(ifconfig | grep broadcast | awk '{print $2}')"
 if [ -z "$IP_ADDRESS"]; then
       IP_ADDRESS="$(ifconfig | grep Bcast | awk '{print $2}' | awk -F: '{print $2}')"
 fi
-IP_ADDRESS_LAST_BYTE="$(echo '$IP_ADDRESS' | cut -d'.' -f 4)"
+IP_ADDRESS_LAST_BYTE="$(echo "$IP_ADDRESS" | cut -d'.' -f 4)"
 
 #echo "IP Address = $IP_ADDRESS"
 #echo "listen_address: $IP_ADDRESS" >> /opt/dse/dse-5.1.5/resources/cassandra/conf/cassandra.yaml
