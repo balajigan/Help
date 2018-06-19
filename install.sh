@@ -107,7 +107,7 @@ case $1 in
 	tar -xvzf kafka_2.12-1.0.0.tgz
 	curl https://raw.githubusercontent.com/balajigan/Help/master/templates/server.properties > /opt/kafka/kafka_2.12-1.0.0/config/server.properties
 	sed -i -e "s/broker.id=TBD/broker.id=$IP_ADDRESS_LAST_BYTE/g" /opt/kafka/kafka_2.12-1.0.0/config/server.properties
-        sed -i -e "s/listeners=PLAINTEXT://TBD:9092/listeners=PLAINTEXT://$IP_ADDRESS:9092/g" /opt/kafka/kafka_2.12-1.0.0/config/server.properties
+        sed -i -e "s/TBD:9092/$IP_ADDRESS:9092/g" /opt/kafka/kafka_2.12-1.0.0/config/server.properties
 
         sed -i -e "s/zookeeper.connect=TBD:2181/zookeeper.connect=$IP_ADDRESS:2181/g" /opt/kafka/kafka_2.12-1.0.0/config/server.properties
 	echo "Use this command for running the tests: /opt/kafka/kafka_2.12-1.0.0/bin/kafka-server-start.sh /opt/kafka/kafka_2.12-1.0.0/config/server.properties &"
