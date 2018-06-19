@@ -95,7 +95,7 @@ case $1 in
 	curl https://raw.githubusercontent.com/balajigan/Help/master/templates/zoo.cfg > /opt/zookeeper/zookeeper-3.4.10/conf/zoo.cfg
 	cd /tmp
 	mkdir zookeeper
-	echo "36" > /tmp/zookeeper/myid
+	echo "$IP_ADDRESS" | cut -d'.' -f 4 > /tmp/zookeeper/myid
         echo "Installing Kafka"
 	mkdir /opt/kafka
 	cd /opt/kafka
