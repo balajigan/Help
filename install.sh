@@ -11,6 +11,7 @@ IP_ADDRESS="$(ifconfig | grep broadcast | awk '{print $2}')"
 if [ -z "$IP_ADDRESS"]; then
       IP_ADDRESS="$(ifconfig | grep Bcast | awk '{print $2}' | awk -F: '{print $2}')"
 fi
+IP_ADDRESS_LAST_BYTE="$(echo '$IP_ADDRESS' | cut -d'.' -f 4)"
 
 #echo "IP Address = $IP_ADDRESS"
 #echo "listen_address: $IP_ADDRESS" >> /opt/dse/dse-5.1.5/resources/cassandra/conf/cassandra.yaml
@@ -104,6 +105,11 @@ case $1 in
 	cd /opt/kafka
 	curl -O http://apache.claz.org/kafka/1.0.0/kafka_2.12-1.0.0.tgz
 	tar -xvzf kafka_2.12-1.0.0.tgz
+	curl https://raw.githubusercontent.com/balajigan/Help/master/templates/server.properties > /opt/kafka/kafka_2.12-1.0.0/config/server.properties
+	sed -i -e "s/broker.id=TBD/broker.id=$IP_ADDRESS_LAST_BYTE/g" /opt/kafka/kafka_2.12-1.0.0/config/server.properties
+        sed -i -e "s/listeners=PLAINTEXT://TBD:9092/listeners=PLAINTEXT://$IP_ADDRESS:9092/g" /opt/kafka/kafka_2.12-1.0.0/config/server.properties
+
+        sed -i -e "s/zookeeper.connect=TBD:2181/zookeeper.connect=$IP_ADDRESS:2181/g" /opt/kafka/kafka_2.12-1.0.0/config/server.properties
 	echo "Use this command for running the tests: /opt/kafka/kafka_2.12-1.0.0/bin/kafka-server-start.sh /opt/kafka/kafka_2.12-1.0.0/config/server.properties &"
 	#/opt/kafka/kafka_2.12-1.0.0/bin/kafka-topics.sh --create --topic test-topic --zookeeper localhost:2181 --partitions 3 --replication-factor 1
 	;;
