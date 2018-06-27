@@ -94,9 +94,10 @@ blkid
 
 ### To mount at the boot 
 
-vi /etc/fstab file adjusting the UUID to your device's id and the directory to where you want to mount:
+vi /etc/fstab and add the following line.
 
-UUID=<uuid of the partition> /data1 ext4 defaults 0 0
+UUID=uuid_of_the_partition /data1 ext4 defaults 0 0
 
-mount -a - remounts filesystems from /etc/fstab
+mount -a (remounts filesystems from /etc/fstab)
+
 
