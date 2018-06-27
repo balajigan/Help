@@ -69,7 +69,7 @@ sudo fdisk -l
 
 ### Partition the disk
 
-sudo fdisk /dev/sdb
+sudo fdisk /dev/sdc
 
 Press n to create a partition
 
@@ -79,13 +79,13 @@ Press w to write your changes or q to quit
 
 ### Format the partition
 
-sudo mkfs -t ext4 /dev/sdb1
+sudo mkfs -t ext4 /dev/sdc1
 
 ### Mount the partition
 
 mkdir /data1
 
-mount -t ext4 /dev/sdb1 /data1
+mount -t ext4 /dev/sdc1 /data1
 
 ### Get disk uuid
 ls -al /dev/disk/by-uuid/
