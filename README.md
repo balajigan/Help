@@ -62,3 +62,41 @@ sudo dpkg -i test.deb
 
 cf login -a https://api.run.pivotal.io
 
+## mounting the files in Linux VMs
+### list the disks and partitions
+
+sudo fdisk -l
+
+### Partition the disk
+
+sudo fdisk /dev/sdb
+
+Press n to create a partition
+
+Press p or l to create primary or logical partitions
+
+Press w to write your changes or q to quit
+
+### Format the partition
+
+sudo mkfs -t ext4 /dev/sdb1
+
+### Mount the partition
+
+mkdir /data1
+
+mount -t ext4 /dev/sdb1 /data1
+
+### Get disk uuid
+ls -al /dev/disk/by-uuid/
+or
+blkid
+
+### To mount at the boot 
+
+vi /etc/fstab file adjusting the UUID to your device's id and the directory to where you want to mount:
+
+UUID=<uuid of the partition> /data1 ext4 defaults 0 0
+
+mount -a - remounts filesystems from /etc/fstab
+
