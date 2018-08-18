@@ -20,6 +20,8 @@ mvn archetype:generate -B -DarchetypeGroupId=am.ik.archetype -DarchetypeArtifact
 
 git remote add origin https://github.com/balajigan/PCF-HelloWorld.git
 
+https://start.spring.io/
+
 ## jMeter related commands
 
 mkdir /opt/jmeter
