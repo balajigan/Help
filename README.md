@@ -110,4 +110,8 @@ jar cfv test-jars.jar file1.class file2.class file3.class
 
 jar tf test-jars.jar
 
+## Checking SSL cert issue
+
+java SSLPoke HOST_NAME:443
+
 
