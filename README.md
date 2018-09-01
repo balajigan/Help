@@ -102,10 +102,12 @@ UUID=uuid_of_the_partition /data1 ext4 defaults 0 0
 
 mount -a (remounts filesystems from /etc/fstab)
 
-## Creating JAR file from class files
+## Creating JAR file from class files and view the classes
 
 jar cfv test-jars.jar *
 
 jar cfv test-jars.jar file1.class file2.class file3.class
+
+jar tf test-jars.jar
 
 
