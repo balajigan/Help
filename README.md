@@ -114,4 +114,8 @@ jar tf test-jars.jar
 
 java SSLPoke HOST_NAME:443
 
+## importing .cer file into truststore
+
+keytool -importcert -file certificate.cer -keystore truststore.jks -alias "Alias"
+
 
