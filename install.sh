@@ -73,9 +73,10 @@ case $1 in
         #curl https://raw.githubusercontent.com/balajigan/Help/master/templates/cassandra.yaml > /opt/dse/dse-5.1.5/resources/cassandra/conf/cassandra.yaml
         #sed 'listen_address: $IP_ADDRESS' /etc/dse/cassandra/cassandra.yaml
         sed -i -e "s/listen_address: localhost/listen_address: $IP_ADDRESS/g" /etc/dse/cassandra/cassandra.yaml
-        sed -i -e "s/rpc_address: localhost/rpc_address: $IP_ADDRESS/g" /etc/dse/cassandra/cassandra.yaml
+	sed -i -e "s/native_transport_address: localhost/native_transport_address: $IP_ADDRESS/g" /etc/dse/cassandra/cassandra.yaml
+        sed -i -e "s/127.0.0.1 /$IP_ADDRESS/g" /etc/dse/cassandra/cassandra.yaml
 
-        echo "Update YAMLs and run command: dse-5.1.5/bin/dse cassandra -R &"
+        echo "service dse status"
         ;;
 	
    hz)
