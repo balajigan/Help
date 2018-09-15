@@ -33,6 +33,17 @@ case $1 in
        sudo apt-get install -y maven
    
        ;;
+    java)
+       echo "Installing java"
+       mkdir /opt/java
+       cd /opt/java
+       curl -O -k https://storage.googleapis.com/test-bin-for-use/jdk-8u152-linux-x64.tar.gz
+       tar -xvzf jdk-8u152-linux-x64.tar.gz
+       rm /usr/bin/java
+       ln -s /opt/java/jdk1.8.0_152/bin/java /usr/bin/java
+       export JAVA_HOME=/opt/java/jdk1.8.0_152/
+       export PATH=$PATH:/opt/java/jdk1.8.0_152/bin
+       ;;      
    dse)
         echo "Installing DSE"
         mkdir /opt/dse
