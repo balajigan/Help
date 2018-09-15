@@ -75,7 +75,7 @@ case $1 in
         sed -i -e "s/listen_address: localhost/listen_address: $IP_ADDRESS/g" /etc/dse/cassandra/cassandra.yaml
 	sed -i -e "s/native_transport_address: localhost/native_transport_address: $IP_ADDRESS/g" /etc/dse/cassandra/cassandra.yaml
         sed -i -e "s/127.0.0.1 /$IP_ADDRESS/g" /etc/dse/cassandra/cassandra.yaml
-
+	iptables -F
         echo "service dse status"
         ;;
 	
