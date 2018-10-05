@@ -58,26 +58,26 @@ case $1 in
 
         echo "Update YAMLs and run command: dse-5.1.5/bin/dse cassandra -R &"
         ;;
-   rhel_dse)
-        echo "Installing RHEL DSE"
-        sudo yum install -y libaio
-	cat > /etc/yum.repos.d/datastax.repo << EOF
-	[datastax]
-	name = DataStax Repo for DataStax Enterprise
-	baseurl=https://EMAIL%40yahoo.com:DOWNLOADKEY@rpm.datastax.com/enterprise/
-	enabled=1
-	gpgcheck=0
-	EOF
-	sudo yum install -y dse-full-6.0.2-1
+#   rhel_dse)
+#        echo "Installing RHEL DSE"
+#        sudo yum install -y libaio
+#	cat > /etc/yum.repos.d/datastax.repo << EOF
+#	[datastax]
+#	name = DataStax Repo for DataStax Enterprise
+#	baseurl=https://EMAIL%40yahoo.com:DOWNLOADKEY@rpm.datastax.com/enterprise/
+#	enabled=1
+#	gpgcheck=0
+#	EOF
+#	sudo yum install -y dse-full-6.0.2-1
 	#curl https://raw.githubusercontent.com/balajigan/Help/master/templates/dse.yaml > /opt/dse/dse-5.1.5/resources/dse/conf/dse.yaml
         #curl https://raw.githubusercontent.com/balajigan/Help/master/templates/cassandra.yaml > /opt/dse/dse-5.1.5/resources/cassandra/conf/cassandra.yaml
         #sed 'listen_address: $IP_ADDRESS' /etc/dse/cassandra/cassandra.yaml
-        sed -i -e "s/listen_address: localhost/listen_address: $IP_ADDRESS/g" /etc/dse/cassandra/cassandra.yaml
-	sed -i -e "s/native_transport_address: localhost/native_transport_address: $IP_ADDRESS/g" /etc/dse/cassandra/cassandra.yaml
-        sed -i -e "s/127.0.0.1 /$IP_ADDRESS/g" /etc/dse/cassandra/cassandra.yaml
-	iptables -F
-        echo "service dse status"
-        ;;
+ #       sed -i -e "s/listen_address: localhost/listen_address: $IP_ADDRESS/g" /etc/dse/cassandra/cassandra.yaml
+#	sed -i -e "s/native_transport_address: localhost/native_transport_address: $IP_ADDRESS/g" /etc/dse/cassandra/cassandra.yaml
+#        sed -i -e "s/127.0.0.1 /$IP_ADDRESS/g" /etc/dse/cassandra/cassandra.yaml
+#	iptables -F
+#        echo "service dse status"
+#        ;;
 	
    hz)
         echo "Installing Hz"
