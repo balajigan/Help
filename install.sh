@@ -266,4 +266,3 @@ case $1 in
         echo "Unknown"
         ;;
    esac
-   
