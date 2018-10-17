@@ -134,9 +134,9 @@ ALTER TABLE table_name WITH nodesync={'enabled': 'true'};
 
 ### Enable for all tables in the keyspace
 
-nodesync enable -v -k keyspace_name "*"
+$nodesync enable -v -k keyspace_name "*"
 
 ### Enable for list of tables in the keyspace
 
-nodesync enable keyspace_name.table_name keyspace_name.table_name
+$nodesync enable keyspace_name.table_name keyspace_name.table_name
 
