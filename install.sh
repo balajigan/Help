@@ -123,27 +123,27 @@ case $1 in
         echo "Installing Zookeeper"
 	mkdir /opt/zookeeper
 	cd /opt/zookeeper
-	curl -O http://apache.claz.org/zookeeper/zookeeper-3.4.10/zookeeper-3.4.10.tar.gz
-	tar -xvzf zookeeper-3.4.10.tar.gz
-	curl https://raw.githubusercontent.com/balajigan/Help/master/templates/zoo.cfg > /opt/zookeeper/zookeeper-3.4.10/conf/zoo.cfg
+	curl -O http://apache.claz.org/zookeeper/zookeeper-3.4.14/zookeeper-3.4.14.tar.gz
+	tar -xvzf zookeeper-3.4.14.tar.gz
+	curl https://raw.githubusercontent.com/balajigan/Help/master/templates/zoo.cfg > /opt/zookeeper/zookeeper-3.4.14/conf/zoo.cfg
 	cd /tmp
 	mkdir zookeeper
 	echo "$IP_ADDRESS" | cut -d'.' -f 4 > /tmp/zookeeper/myid
-	echo "Use this command for running the tests: /opt/zookeeper/zookeeper-3.4.10/bin/zkServer.sh start"
+	echo "Use this command for running the tests: /opt/zookeeper/zookeeper-3.4.14/bin/zkServer.sh start"
 	;;
     kafka)	
         echo "Installing Kafka"
 	mkdir /opt/kafka
 	cd /opt/kafka
-	curl -O http://apache.claz.org/kafka/1.0.0/kafka_2.12-1.0.0.tgz
-	tar -xvzf kafka_2.12-1.0.0.tgz
-	curl https://raw.githubusercontent.com/balajigan/Help/master/templates/server.properties > /opt/kafka/kafka_2.12-1.0.0/config/server.properties
-	sed -i -e "s/broker.id=TBD/broker.id=$IP_ADDRESS_LAST_BYTE/g" /opt/kafka/kafka_2.12-1.0.0/config/server.properties
-        sed -i -e "s/TBD:9092/$IP_ADDRESS:9092/g" /opt/kafka/kafka_2.12-1.0.0/config/server.properties
+	curl -O http://apache.claz.org/kafka/2.2.0/kafka_2.12-2.2.0.tgz
+	tar -xvzf kafka_2.12-2.2.0.tgz
+	curl https://raw.githubusercontent.com/balajigan/Help/master/templates/server.properties > /opt/kafka/kafka_2.12-2.2.0/config/server.properties
+	sed -i -e "s/broker.id=TBD/broker.id=$IP_ADDRESS_LAST_BYTE/g" /opt/kafka/kafka_2.12-2.2.0/config/server.properties
+        sed -i -e "s/TBD:9092/$IP_ADDRESS:9092/g" /opt/kafka/kafka_2.12-2.2.0/config/server.properties
 
-        sed -i -e "s/zookeeper.connect=TBD:2181/zookeeper.connect=$IP_ADDRESS:2181/g" /opt/kafka/kafka_2.12-1.0.0/config/server.properties
-	echo "Use this command for running the tests: /opt/kafka/kafka_2.12-1.0.0/bin/kafka-server-start.sh /opt/kafka/kafka_2.12-1.0.0/config/server.properties &"
-	#/opt/kafka/kafka_2.12-1.0.0/bin/kafka-topics.sh --create --topic test-topic --zookeeper localhost:2181 --partitions 3 --replication-factor 1
+        sed -i -e "s/zookeeper.connect=TBD:2181/zookeeper.connect=$IP_ADDRESS:2181/g" /opt/kafka/kafka_2.12-2.2.0/config/server.properties
+	echo "Use this command for running the tests: /opt/kafka/kafka_2.12-2.2.0/bin/kafka-server-start.sh /opt/kafka/kafka_2.12-2.2.0/config/server.properties &"
+	#/opt/kafka/kafka_2.12-2.2.0/bin/kafka-topics.sh --create --topic test-topic --zookeeper localhost:2181 --partitions 3 --replication-factor 1
 	;;
    spark)
         echo "Installing Spark"
