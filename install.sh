@@ -272,6 +272,14 @@ case $1 in
 	sudo apt-get update
 	sudo apt-get install docker-ce docker-ce-cli containerd.io
 	sudo docker run hello-world
+        ;;
+     couchbase)
+        mkdir /opt/couchbase
+	cd /opt/couchbase
+	curl -O -k https://packages.couchbase.com/releases/6.0.0/couchbase-server-community_6.0.0-debian9_amd64.deb
+	sudo apt-get update
+	sudo apt-get -f install
+	sudo dpkg -i couchbase-server-community_6.0.0-debian9_amd64.deb
 	;;
    *)
         echo "Unknown"
