@@ -24,7 +24,13 @@ case $1 in
       sudo systemctl status  metricbeat_eck.service
 
       ;;
-   
+   test)
+      echo "Creating the required folders and files for testing kafka"
+      mkdir /opt/filebeat/filebeat-8.0.1
+      echo "Test filebeat file" > /opt/filebeat/filebeat-8.0.1/filebeat.yml
+      mkdir /opt/metricbeat/metricbeat-8.0.1      
+      echo "Test metricbeat file" > /opt/metricbeat/metricbeat-8.0.1/metricbeat.yml
+      ;;   
    *)
       echo "Unknown"
       ;;
