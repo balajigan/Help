@@ -149,8 +149,11 @@ case $1 in
         echo "Installing Spark"
 	mkdir /opt/spark
 	cd /opt/spark
-	curl -O http://apache.claz.org/spark/spark-2.3.1/spark-2.3.1-bin-hadoop2.7.tgz
-	tar -xvzf spark-2.3.1-bin-hadoop2.7.tgz
+	curl -O -k https://dlcdn.apache.org/spark/spark-3.5.0/spark-3.5.0-bin-hadoop3.tgz
+	tar -xvzf spark-3.5.0-bin-hadoop3.tgz
+ 	# cd spark-3.5.0-bin-hadoop3
+ 	# cp conf/spark-env.sh.template conf/spark-env.sh
+  	# sbin/start-all.sh 
 	;;
     elastic)
         echo "Installing Elasticsearch"
