@@ -153,6 +153,11 @@ case $1 in
 	tar -xvzf spark-3.5.0-bin-hadoop3.tgz
  	# cd spark-3.5.0-bin-hadoop3
  	# cp conf/spark-env.sh.template conf/spark-env.sh
+
+  	# For installing jre
+  	# sudo apt install default-jre
+
+   	# for running master and worker
   	# sbin/start-all.sh 
 	;;
     elastic)
